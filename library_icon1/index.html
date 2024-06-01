@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+  <link rel="stylesheet" href="./index.css" />
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+</head>
+
+<body>
+  <div class="app">
+    <!-- Header -->
+    <div class="header">
+      <img src="./img/logo.png" alt="logo" class="logo" />
+      <div class="open-bar">
+        <div onclick="onShowBar()">SHOW BAR</div>
+      </div>
+      <div class="nav">
+        <a href="" class="nav-item nav-item--active">Trang Chủ</a>
+        <a href="" class="nav-item">Tin tức</a>
+        <a href="" class="nav-item">Thể thao</a>
+        <a href="" class="nav-item">Văn hóa</a>
+        <a href="" class="nav-item">Xã hội</a>
+        <a href="" class="nav-item">Liên hệ</a>
+      </div>
+      <div class="side-bar">
+        <i class="fa-solid fa-bars icon-bar-close" onclick="onCloseBar()"></i>
+        <div class="list-nav-moblie">
+          <a href="" class="nav-item nav-item--active">Trang Chủ</a>
+          <a href="" class="nav-item">Tin tức</a>
+          <a href="" class="nav-item">Thể thao</a>
+          <a href="" class="nav-item">Văn hóa</a>
+          <a href="" class="nav-item">Xã hội</a>
+          <a href="" class="nav-item">Liên hệ</a>
+        </div>
+      </div>
+      <form class="search-wrap" onsubmit="return onSubmit()">
+        <input type="text" class="search-input" />
+        <button class="search-button" type="submit">Tìm</button>
+      </form>
+    </div>
+
+    <!-- Banner -->
+    <img src="./img/banner.png" alt="banner" class="banner" />
+    <!-- Container -->
+    <div class="container">
+      <a href="" class="container-header">Hoạt động nổi bật</a>
+      <div class="container-body">
+        <div class="card-promotion-detail">
+          <img src="./img/khuyenmai.jpg" alt="img" class="img-promotion" />
+          <div class="detail-promotion__wraper">
+            <a href="" class="detail-promotion__title">
+              Chương trình khuyến dùng Sữa dinh dưỡng Vinamilk ADM mua 8 tặng 1
+            </a>
+            <div class="detail-promotion__detail">
+              Đơn vị tổ chức: Công ty Cổ phần Sữa Việt Nam </br> 1. Tên chương trình: </br>
+              Chương trình khuyến dùng sữa dinh dưỡng
+            </div>
+          </div>
+        </div>
+        <div class="notification">
+          <div class="notification-card">
+            <img src="./img/susu.jpg" alt="susu" class="notification-img">
+            <a href="" class="notification-title">CTKD Susu sưu tầm thẻ đổi lồng đèn/ hộp bút POP-IT, thẻ điện thoại
+              và…</a>
+            <div class="notification-detail">Chương trình khuyến mại: “Khuyến dùng SuSu sưu tầm thẻ đổi lồng đèn/ hộp
+              bút pop-it, thẻ điện thoại và bộ túi ngủ đi học”</div>
+          </div>
+          <div class="notification-card">
+            <img src="./img/hero.jpg" alt="susu" class="notification-img">
+            <a href="" class="notification-title">Chương trình khuyến mãi hấp dẫn “Nạp Hero – chào hè rộn ràng, săn
+              quà…</a>
+            <div class="notification-detail"> I. THÔNG TIN CHƯƠNG TRÌNH: </br>
+              1. Tên chương trình: NẠP HERO – CHÀO HÈ</br> RỘN RÀNG, SĂN QUÀ HẤP DẪN” </br>
+              2. Đối tượng tham gia:…
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- footer -->
+    <div class="footer">
+      Giang Đức Mạnh
+    </div>
+  </div>
+  <script>
+    function onSubmit() {
+      event.preventDefault();
+      const inputSearch = document.querySelector('.search-input');
+      const valueInput = inputSearch?.value;
+      if (valueInput === "") {
+        alert("Name must be filled out");
+        return false;
+      }
+      alert(valueInput);
+    }
+
+    function onShowBar() {
+      const sideBar = document.querySelector('.side-bar');
+      sideBar.style.display = "block"
+    }
+
+    function onCloseBar() {
+      const sideBar = document.querySelector('.side-bar');
+      sideBar.style.display = "none"
+    }
+  </script>
+</body>
+
+</html>
